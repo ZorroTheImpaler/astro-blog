@@ -21,11 +21,14 @@ import '@fontsource-variable/eb-garamond/wght.css';
 
   <body>
     <header class="site-header">
-      <div class="logo">
-        <a href={`/${lang}/`}>ZK</a>
-      </div>
+        <div class="header-row icon-cluster">
+            <div class="logo">
+                <a href={`/${lang}/`}>ZK</a>
+            </div>
+            <LanguagePicker />
+        </div>
 
-      <nav class="nav">
+      <nav class="nav header-row">
         <ul class="nav-list">
           <li>
             <a
@@ -42,7 +45,6 @@ import '@fontsource-variable/eb-garamond/wght.css';
           </li>
         </ul>
       </nav>
-      <LanguagePicker />
     </header>
 
     <main class="container">

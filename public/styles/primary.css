@@ -18,7 +18,7 @@
     --link: light-dark(#2b2b2b, #f0eaea);
 
     /* Hover accent color  */
-    --accent: light-dark(#a7d8d7, #6BA3A1);
+    --accent: light-dark(#444444, #444444);
 }
 
 /* Base */
@@ -47,6 +47,12 @@ body {
     align-items: baseline;
 }
 
+.icon-cluster {
+    align-items: stretch;
+    display: inline-flex;
+    flex-direction: column;
+}
+
 /* ---- Define Current Logo - Consider refining later as SVG ---- */
 .logo a {
     font-family: 'EB Garamond Variable', serif;
@@ -64,11 +70,27 @@ body {
 
 /* Body text */
 .nav p,
-.language-switcher p,
-.nav li,
-.language-switcher li {
+.nav li {
     line-height: 1.27;
     font-size: 1.57rem;
+}
+
+
+
+@media (max-width: 640px) {
+
+    .nav p,
+    .nav li {
+        font-size: 1.4rem
+    }
+}
+
+@media (max-width: 380px) {
+
+    .nav p,
+    .nav li {
+        font-size: 1.2rem
+    }
 }
 
 /* ---- center nav and language switcher to midline of logo ---- */
@@ -79,11 +101,18 @@ body {
 
 /* ---- Nav and Language Switcher Base Styles ---- */
 
-.nav,
+.nav {
+    font-size: 0.75rem;
+    font-weight: 700;
+    transform: translateY(-0.65rem);
+}
+
 .language-switcher {
     font-size: 0.75rem;
     font-weight: 700;
-    transform: translateY(-0.75rem);
+    justify-content: space-between;
+    transform: translateX(0.235rem);
+    font-size: 1.33rem;
 }
 
 /* Shared list layout */
@@ -153,6 +182,7 @@ h3 {
     font-weight: 600;
     letter-spacing: -0.047em;
     margin-bottom: -0.5rem;
+    margin-top: 0;
 }
 
 h1 {
