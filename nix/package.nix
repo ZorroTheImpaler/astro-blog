@@ -3,7 +3,7 @@ let
   docs-package = pkgs.buildNpmPackage {
     name = "blog-package";
     src = ../.;
-    npmDepsHash = "sha256-7Vplo6JFKQR5iTLzRsAm5LC3TCiQOcScj3nJIEikJlg=";
+    npmDepsHash = "sha512-4RzeF6e9JfGUqUjrLQaYlsdxxiTAb2X0vDkVy3ICoArIDcC/1TU2JFwBavj1Gk71FU4ePrD21+2xInY1IB0iJw==";
     buildPhase = ''
       mkdir -p public/cv
       cp -r ${perSystem.cv.default}/* public/cv
