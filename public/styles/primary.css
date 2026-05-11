@@ -4,15 +4,13 @@
     /* Base */
     --bg: light-dark(#ede8e8, #1f1f1f);
     --text: light-dark(#2b2b2b, #e6e1e1);
-
+    --code-inline: light-dark(#f9f9f9, #2b2b2b);
     /* Headings (slightly softer than pure text) */
     --heading: light-dark(#444444, #f2eeee);
 
-    /* Subtle surfaces (buttons, nav, etc.) */
-    --surface: light-dark(#e2dddd, #2a2a2a);
-
-    /* Borders / separators */
-    --border: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
+    /* Subtle surfaces (code blocks) */
+    --surface: light-dark(#f9f9f9, #2a2a2a);
+    --surface-border: light-dark(#d0d7de, #3d444d);
 
     /* Link */
     --link: light-dark(#2b2b2b, #f0eaea);
@@ -223,6 +221,39 @@ main a {
 
 main a:hover {
     border-bottom: 1px solid var(--link);
+}
+
+/* Inline code */
+code {
+    font-family: 'Victor Mono', monospace;
+    font-size: 1.6rem;
+    font-weight: 300;
+
+    background: var(--code-inline);
+    border: 1px solid var(--surface-border);
+
+    padding: 0.15em 0.4em;
+    border-radius: 6px;
+
+    white-space: nowrap;
+}
+
+/* Code blocks */
+pre {
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+
+    border-radius: 12px;
+    padding: 1.25rem;
+
+    overflow-x: auto;
+}
+
+pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    white-space: pre;
 }
 
 strong {
